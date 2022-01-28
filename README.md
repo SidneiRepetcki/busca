@@ -37,16 +37,12 @@ Você não precisa usar `eject`. O conjunto de recursos com curadoria é adequad
 ### OBSERVAÇÕES
 
 Projeto foi feito baseado no que foi pedido, simples e funcional, criado a API de busca de musicas e videos do youtube.
-A chave que foi gerada de uma aplicação simples, onde iremos buscar por um determinado artista ou banda para termos acesso aos vídeos do Youtube retornados pela busca esta falha com ' ERRO 403 '.
+A chave que foi dada, onde iremos buscar por um determinado artista ou banda para termos acesso aos vídeos do Youtube retornados pela busca esta falha com ' ERRO 403 '.
 
 Youtube: ' AIzaSyDd_sfvQ4NASb-k0oKYAr_g9FZcQILtyKc '
 
-ERRO 403 - sinaliza que você não tem permissão para ver determinada página. Porém, o servidor entende a solicitação e sabe quem está tentando o acesso, porém se recusa a liberar a passagem.
+Segue a nova chave gerada:
 
-Foi gerada uma nova chave porém indentifado outro erro ' ERRO 404 '.
+Nova chave gerada do YOUTUBE: ' AIzaSyDJHLPBdVBrkAoKALCgJMFvdi_7NE4FCnw ' 
 
-Nova chave gerada do YOUTUBE: ' AIzaSyDJHLPBdVBrkAoKALCgJMFvdi_7NE4FCnw '
-
-ERROR 404 - normalmente acontece quando o usuário clica em um link quebrado ou quando o site altera a localização de um conteúdo sem corrigir os links de redirecionamento. Digitar incorretamente o endereço também é uma causa comum desse erro. Precisa-se de tempo para identificar o erro. 
-
-O maior desafio deste projeto foi criar uma API do YOUTUBE, implementando qualquer tipo de video. 
+O maior desafio deste projeto foi criar uma API do YOUTUBE, implementando qualquer tipo de video e também acabei descobrindo que tem um certo limite de pesquisa de videos no youtube logo depois ele bloqueia a chave API gerada por um tempo. 

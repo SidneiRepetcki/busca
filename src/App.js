@@ -12,7 +12,7 @@ export default function App() {
             setInfo({});
             if (text) {
                 fetch(
-                  `${api}AIzaSyDJHLPBdVBrkAoKALCgJMFvdi_7NE4FCnw&part=snippet&maxResults=5&q=${text}`
+                  `${api}/search?key=AIzaSyDJHLPBdVBrkAoKALCgJMFvdi_7NE4FCnw&part=snippet&maxResults=9&q=${text}`
                 )
                   .then((response) => response.json())
                   .then((response) => {
@@ -28,22 +28,26 @@ export default function App() {
                   value={text}
                   onChange={(search) => setText(search)}
                 />
-                {text && !info.data && (
+                {text && !info.items && (
                   <span>Carregando..</span>
                 )}
-                {info.data && (
-                  <ul className="music-list">
-                      {info.data.map((musica) => (
-                        <li key={musica.id}>
-                          <img 
-                            src={musica.attributes.posterImage.small}
-                            alt={musica.attributes.canonicalTitle}
+                {info.items && (
+                  <div className="music-list">
+                      {info.items.map((musica) => (
+                        <div>                    
+                            <iframe
+                              title="Video"
+                              className="Video"
+                              width="500"
+                              height="370"
+                              src={`https://www.youtube.com/embed/${musica.id.videoId}`}
+                              frameborder="0"
+                              allowfullscreen
                             />
-                            {musica.attirubutes.canonicalTitle}
-                        </li>
+                        </div>
 
                       ))}
-                  </ul>
+                  </div>
                 )}
         </div>       
     );
